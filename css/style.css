@@ -1,0 +1,58 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+
+.cf:before, .cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#map {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 400;
+	font-size: 0.75em;
+}
+
+#tooltip {
+	background-color: white;
+	padding: 5px;
+	text-align: left;
+ 	box-shadow: 3px 3px 5px #888888;
+}
+
+.inner-tooltip {
+	/*background-color: lightgray;*/
+	width: 100%;
+}
+
+	p.state-name {
+		font-size: 1.3em;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 3px 7px;
+		background-color: rgb(204,238,204);
+	}
+
+	p.name, p.worth {
+		font-size: 1.4em;
+	}
+
+	p.name {
+		font-weight: bold;
+	}
+
+	p.worth {
+		font-weight: normal;
+	}
