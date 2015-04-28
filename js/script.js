@@ -49,21 +49,35 @@ d3.json("data/us-states.json", function(error, json) {
 		  	.attr("stroke", "white")
 		  	.on("mousemove", function(d) {
 
-		  		// console.log(d);
+		  		if (d.id == 23 || d.id == 33 || d.id == 25 || d.id == 44 || d.id == 50 || d.id == 09) {
 
-		  		tooltip.style("visibility", "visible");
-		  		tooltip.transition()
-		  			.duration(100);
+			  		tooltip.style("visibility", "visible");
+			  		tooltip.transition()
+			  			.duration(100);
 
-		  		tooltip.html(function() {
-		  			var source = $("#tooltip-template").html();
-		  			var template = Handlebars.compile(source);
-		  			return template(d.properties);
-		  		})
-		  		.style("left", (d3.event.pageX) + 30 + "px")
-		  		.style("top", (d3.event.pageY) + "px");
-		  		// .style("left", (d3.event.pageX) - 500 + "px")
-		  		// .style("top", (d3.event.pageY) - 100 + "px");
+			  		tooltip.html(function() {
+			  			var source = $("#tooltip-template").html();
+			  			var template = Handlebars.compile(source);
+			  			return template(d.properties);
+			  		})
+			  		.style("left", (d3.event.pageX) - 300 + "px")
+			  		.style("top", (d3.event.pageY) + "px");
+
+		  		} else {
+
+			  		tooltip.style("visibility", "visible");
+			  		tooltip.transition()
+			  			.duration(100);
+
+			  		tooltip.html(function() {
+			  			var source = $("#tooltip-template").html();
+			  			var template = Handlebars.compile(source);
+			  			return template(d.properties);
+			  		})
+			  		.style("left", (d3.event.pageX) + 30 + "px")
+			  		.style("top", (d3.event.pageY) + "px");
+
+		  		}
 
 		  	});
 
