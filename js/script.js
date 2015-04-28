@@ -21,8 +21,9 @@ function editWorthValue(str) {
 }
 
 d3.json("/temp/data/us-states.json", function(error, json) {
-
+// d3.json("/data/us-states.json", function(error, json) {
 	d3.csv("/temp/data/data.csv", function(error, data) {
+	// d3.csv("/data/data.csv", function(error, data) {
 
 		for (var i = 0; i < data.length; i++) {
 			for (var k = 0; k < json.features.length; k++) {

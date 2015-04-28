@@ -31,10 +31,19 @@
  	box-shadow: 3px 3px 5px #888888;
 }
 
+path:hover {
+	fill: lightgray;
+}
+
 .inner-tooltip {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	/*background-color: lightgray;*/
 	width: 100%;
 }
+
+	p.state-name, p.name, p.worth {
+		margin-top: 5px;
+	}
 
 	p.state-name {
 		font-size: 1.3em;
