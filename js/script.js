@@ -60,8 +60,10 @@ d3.json("data/us-states.json", function(error, json) {
 		  			var template = Handlebars.compile(source);
 		  			return template(d.properties);
 		  		})
-		  		.style("left", (d3.event.pageX) - 500 + "px")
-		  		.style("top", (d3.event.pageY) - 100 + "px");
+		  		.style("left", (d3.event.pageX) + 30 + "px")
+		  		.style("top", (d3.event.pageY) + "px");
+		  		// .style("left", (d3.event.pageX) - 500 + "px")
+		  		// .style("top", (d3.event.pageY) - 100 + "px");
 
 		  	});
 
