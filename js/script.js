@@ -63,6 +63,20 @@ d3.json("data/us-states.json", function(error, json) {
 			  		.style("left", (d3.event.pageX) - 300 + "px")
 			  		.style("top", (d3.event.pageY) + "px");
 
+		  		} else if (d.id == 15) {
+
+			  		tooltip.style("visibility", "visible");
+			  		tooltip.transition()
+			  			.duration(100);
+
+			  		tooltip.html(function() {
+			  			var source = $("#tooltip-template").html();
+			  			var template = Handlebars.compile(source);
+			  			return template(d.properties);
+			  		})
+			  		.style("left", (d3.event.pageX) + 30 + "px")
+			  		.style("top", (d3.event.pageY) - 100 + "px");
+
 		  		} else {
 
 			  		tooltip.style("visibility", "visible");
